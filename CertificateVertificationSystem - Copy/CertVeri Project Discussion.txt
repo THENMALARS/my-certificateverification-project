@@ -1,0 +1,17 @@
+CertVeri Project Discussion
+
+change background color to light color
+
+But how can an admin approve when the another admin is trying to signup ? cause it is showing waiting to approve and on the other end I am unable to do so...... so we need to just keep it simple I prefer like each certificate should have it's unique ID which when others tries to fake it couldn't be verified cause even when this idea looks good while implementing it i find lots of drawback like lack of detection of super admin and the admin how did the super admin sign up ?? nd since lots of company tooo will be using this website there will be issues so i think we need to really look trough these drawbacks let's say we make the registration simple enough and also secure enough so that the card is detected whether the card is verified or fake 
+
+i am facing issues as admin approval is required when i signin and id should be submitted if i try to sign up !!
+
+So let's proceed with this furthermore idea I need more requirements like let me share you the image of my design the background of the website remains same as now but here is the example of how I want the elements to look for the website 
+
+taiwho
+
+what is CRO & increase AOV
+Implement product bundles as the Best Seller , family favorite and Often Gifted!!
+ in the product page to make the viewer build the trust on the company
+let's focus on changing the logo of the store first and add the other requirements accordingly and then learn more regarding the AOV and CRO furthermore....
+ 

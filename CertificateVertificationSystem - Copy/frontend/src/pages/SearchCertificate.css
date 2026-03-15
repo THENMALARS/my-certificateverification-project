@@ -1,0 +1,329 @@
+/* Search Certificate Page - FIXED CENTERING */
+
+.search-certificate-page {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;  /* ← VERTICALLY CENTER */
+  gap: 2rem;
+  min-height: calc(100vh - 80px);  /* ← FULL HEIGHT MINUS NAVBAR */
+  margin-top: 70px;  /* ← SPACE FOR TOP NAVBAR */
+}
+
+/* Main Search Card - Centered */
+.search-main-card {
+  background: rgba(6, 44, 92, 0.25);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 2px solid rgba(43, 126, 193, 0.3);
+  border-radius: 20px;
+  padding: 3rem 4rem;
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 0.6s ease-out;
+}
+
+.search-main-title {
+  font-size: 3rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.search-main-title::before {
+  content: '🔍';
+  font-size: 2.5rem;
+}
+
+.search-main-subtitle {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Search Form */
+.search-main-form {
+  display: flex;
+  gap: 1rem;
+  align-items: stretch;
+  animation: slideUp 0.8s ease-out 0.2s both;
+}
+
+.search-main-input {
+  flex: 1;
+  padding: 1.2rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 50px;
+  background: rgba(150, 150, 160, 0.9);
+  color: #1a1a2e;
+  font-weight: 500;
+  transition: all 0.3s;
+  outline: none;
+}
+
+.search-main-input::placeholder {
+  color: rgba(20, 20, 40, 0.6);
+  font-weight: 400;
+}
+
+.search-main-input:focus {
+  background: rgba(160, 160, 170, 1);
+  box-shadow: 0 0 0 3px rgba(43, 126, 193, 0.3);
+  transform: translateY(-2px);
+}
+
+.search-main-input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.search-main-button {
+  padding: 1.2rem 3rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #2B7EC1 0%, #1E5A8E 100%);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(43, 126, 193, 0.4);
+  min-width: 150px;
+}
+
+.search-main-button:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(43, 126, 193, 0.6);
+  background: linear-gradient(135deg, #3a8fd1 0%, #2668a0 100%);
+}
+
+.search-main-button:active:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.search-main-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Certificate Result Card */
+.certificate-result-card {
+  background: rgba(6, 44, 92, 0.35);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(43, 126, 193, 0.3);
+  border-radius: 20px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 900px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+  animation: slideUp 0.6s ease-out;
+}
+
+.result-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(43, 126, 193, 0.2);
+}
+
+.result-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #2DD4BF;
+  text-shadow: 0 2px 10px rgba(45, 212, 191, 0.4);
+}
+
+/* Certificate Details Grid */
+.certificate-details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.detail-item {
+  background: rgba(30, 90, 142, 0.2);
+  padding: 1.2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(43, 126, 193, 0.2);
+  transition: all 0.3s;
+}
+
+.detail-item:hover {
+  background: rgba(30, 90, 142, 0.3);
+  transform: translateY(-2px);
+  border-color: rgba(43, 126, 193, 0.4);
+}
+
+.detail-label {
+  display: block;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+.detail-value {
+  display: block;
+  font-size: 1.1rem;
+  color: white;
+  font-weight: 600;
+  word-break: break-word;
+}
+
+/* Result Actions */
+.result-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(43, 126, 193, 0.2);
+}
+
+.download-btn {
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #2DD4BF 0%, #2B7EC1 100%);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(45, 212, 191, 0.4);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.download-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(45, 212, 191, 0.6);
+}
+
+.download-icon {
+  font-size: 1.3rem;
+}
+
+/* No Result Card */
+.no-result-card {
+  background: rgba(6, 44, 92, 0.3);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(138, 43, 226, 0.3);
+  border-radius: 20px;
+  padding: 3rem;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.no-result-icon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.7;
+}
+
+.no-result-title {
+  font-size: 1.8rem;
+  color: white;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.no-result-text {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .search-certificate-page {
+    padding: 1.5rem 1rem;
+    margin-top: 60px;
+  }
+
+  .search-main-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .search-main-title {
+    font-size: 2rem;
+  }
+
+  .search-main-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .search-main-form {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .search-main-button {
+    width: 100%;
+  }
+
+  .certificate-details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .certificate-result-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-main-title {
+    font-size: 1.6rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .search-main-input {
+    padding: 1rem 1.5rem;
+  }
+
+  .search-main-button {
+    padding: 1rem 2rem;
+  }
+}
